@@ -1,16 +1,15 @@
-# Astro Starter Kit: Basics
+# Information about the project
+This project is a copy passed to Astro and converted into components. <br>
+original project: https://codepen.io/jcoulterdesign/pen/ZxXbeP
+
+# Clone Astro Project
 
 ```sh
-npm create astro@latest -- --template basics
+git clone https://github.com/Sebas5158R/Solar-System.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![image](https://github.com/user-attachments/assets/da427464-4541-48d2-891f-6f143dda28c0)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
 ## 🚀 Project Structure
 
@@ -22,7 +21,11 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── MoreInfo.astro
+|   |   └── NavPlanets.astro
+|   |   └── Solar.astro
+|   |   └── SolarSystem.astro
+|   |   └── SolarSystemWithMoon.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
