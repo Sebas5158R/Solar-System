@@ -1,0 +1,27 @@
+---
+interface Props {
+  planet: string;
+  description: string;
+}
+
+const { planet, description } = Astro.props;
+---
+
+<div class="solar_systm">
+  <div class={`${planet.toLowerCase()} planet`}>
+    <div class={`${planet.toLowerCase()} planet_description`}>
+      <h2>Planet</h2>
+      <h1>{planet}</h1>
+      <p>
+        {description}
+      </p>
+      <label for={`read${planet.charAt(0).toUpperCase() + planet.slice(1)}`}>
+        <a>
+          Read Mor
+          <span>e</span>
+        </a>
+      </label>
+    </div>
+    <div class="overlay"></div>
+  </div>
+</div>

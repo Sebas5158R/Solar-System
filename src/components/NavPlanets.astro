@@ -1,0 +1,22 @@
+---
+interface Props {
+    classPlanet: string;
+    planet: string;
+    numAu: number;
+    checked: boolean;
+}
+
+const { classPlanet, planet, numAu, checked } = Astro.props;
+---
+
+<input class={classPlanet} id={planet} type='radio' name='planet' checked={checked}>
+  <label class={`menu ${planet}`} for={planet}>
+    <div class='preview'></div>
+    <div class='info'>
+      <h2>
+        <div class='pip'></div>
+        {planet.toUpperCase()}
+      </h2>
+      <h3>{numAu} AU</h3>
+    </div>
+</label>

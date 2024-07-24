@@ -1,0 +1,44 @@
+---
+export type Moon = Array<Record<string, string>>;
+
+interface Props {
+  planet: string;
+  description: string;
+  moon: Moon;
+}
+
+const { planet, description, moon } = Astro.props;
+
+const moonDynamics = moon.map((m) => {
+  return m;
+});
+
+console.log(moonDynamics);
+
+---
+
+<div class="solar_systm">
+  <div class={`${planet.toLowerCase()} planet`}>
+    {
+      moonDynamics.map((moonDynamic) => (
+        <div class={`${moonDynamic.name.toLowerCase()} moon`}>
+          <h3>Moon</h3>
+          <h2>{moonDynamic.name}</h2>
+        </div>
+        <div class={`${moonDynamic.trajectory.toLowerCase()} trajectory`}></div>
+      ))
+    }
+    <div class={`${planet} planet_description`}>
+      <h2>Planet</h2>
+      <h1>{planet}</h1>
+      <p>{description}</p>
+      <label for={`read${planet.charAt(0).toUpperCase() + planet.slice(1)}`}>
+        <a>
+          Read Mor
+          <span>e</span>
+        </a>
+      </label>
+    </div>
+    <div class="overlay"></div>
+  </div>
+</div>

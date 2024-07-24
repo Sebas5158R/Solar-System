@@ -1,0 +1,46 @@
+---
+interface Props {
+  planet: string;
+  description: Array<string>;
+  subTitles: Array<string>;
+  subParagraphs: Array<string>;
+  img: string;
+}
+
+const { planet, description, subTitles, subParagraphs, img } = Astro.props;
+
+const planetFirstMayus = planet.charAt(0).toUpperCase() + planet.slice(1);
+console.log(planetFirstMayus);
+---
+
+<input
+  class="read"
+  id={`read${planetFirstMayus}`}
+  type="radio"
+  name={`${planet.toLowerCase()}Read`}
+/>
+<label class="closeBig" for={`close${planetFirstMayus}`}></label>
+<input
+  class="read"
+  id={`close${planetFirstMayus}`}
+  type="radio"
+  name={`${planet.toLowerCase()}Read`}
+/>
+
+<div class="panel">
+  <h1>{planet}</h1>
+  <p>
+    {description.map((desc) => <p>{desc}</p>)}
+  </p>
+  <img src={img} />
+
+  {
+    subTitles.map((title, index) => (
+      <div>
+        <h2>{title}</h2>
+        <p>{subParagraphs[index]}</p>
+      </div>
+    ))
+  }
+  <br />
+</div>

@@ -1,0 +1,172 @@
+---
+import MoreInfo from "./MoreInfo.astro";
+import SolarSystem from "./SolarSystem.astro";
+import SolarSystemWithMoon from "./SolarSytemWithMoon.astro";
+---
+
+<div class="solar">
+  <SolarSystem
+    planet="mercury"
+    description="The closest planet to the sun. It circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god."
+  />
+  <SolarSystem
+    planet="venus"
+    description="Named for the Roman goddess of love and beauty. In ancient times, Venus was often thought to be two different stars, the evening star and the morning star."
+  />
+  <SolarSystemWithMoon
+    planet="earth"
+    moon={[{ name: "moon", trajectory: "m" }]}
+    description="Earth, our home. It is the only planet known to have an atmosphere containing free oxygen, oceans of liquid water on its surface, and, of course, life."
+  />
+  <SolarSystemWithMoon
+    planet="mars"
+    moon={[
+      { name: "deimos", trajectory: "d" },
+      { name: "phoebos", trajectory: "p" },
+    ]}
+    description="Fourth planet from the Sun and the second smallest planet in the solar systm. Named after the Roman god of war often described as the “Red Planet”."
+  />
+  <SolarSystemWithMoon
+    planet="jupiter"
+    moon={[
+      { name: "lo", trajectory: "lop" },
+      { name: "europa", trajectory: "eu" },
+      { name: "ganymede", trajectory: "ga" },
+    ]}
+    description="Jupiter is the largest planet in the solar systm. Fittingly, it was named after the king of the gods in Roman mythology."
+  />
+  <SolarSystemWithMoon
+    planet="saturn"
+    moon={[
+      { name: "titan", trajectory: "ti" },
+      { name: "dione", trajectory: "di" },
+      { name: "enceladus", trajectory: "enc" },
+    ]}
+    description="Saturn is the sixth planet from the sun and the second largest planet in the solar systm. Saturn was the Roman name for Cronus, the lord of the Titans."
+  />
+  <SolarSystemWithMoon
+    planet="uranus"
+    moon={[
+      { name: "miranda", trajectory: "mir" },
+      { name: "ariel", trajectory: "ari" },
+      { name: "umbriel", trajectory: "umb" },
+    ]}
+    description="The first planet to be discovered by scientists. The planet is notable for its dramatic tilt, which causes its axis to point nearly directly at the sun."
+  />
+  <SolarSystemWithMoon
+    planet="neptune"
+    moon={[
+      { name: "triton", trajectory: "tri" },
+      { name: "proteus", trajectory: "pro" },
+      { name: "nereid", trajectory: "ner" },
+    ]}
+    description="Neptune is the eighth planet from the sun, making it the most distant in the solar systm. This gas giant may have formed much closer to the sun in the early solar systm history before migrating to its present position."
+  />
+  <SolarSystem
+    planet="pluto"
+    description="Pluto, once considered the ninth and most distant planet from the sun, is now the largest known dwarf planet in the solar systm."
+  />
+</div>
+
+<!-- For more info -->
+  <MoreInfo 
+    planet="mercury"
+    description={[
+      "Mercury is the closest planet to the sun. As such, it circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.", 
+      "The Sumerians also knew of Mercury since at least 5,000 years ago. It was often associated with Nabu, the god of writing. Mercury was also given separate names for its appearance as both a morning star and as an evening star. Greek astronomers knew, however, that the two names referred to the same body, and Heraclitus, around 500 B.C., correctly thought that both Mercury and Venus orbited the sun, not Earth"
+      ]}
+    subTitles={[
+      "A year on Mercury is just 88 days long.", 
+      "Mercury is the smallest planet in the Solar Systm.", 
+      "Mercury is the second densest planet.", 
+      "Mercury has wrinkles."
+      ]}
+    subParagraphs={[
+      "One solar day (the time from noon to noon on the planet’s surface) on Mercury lasts the equivalent of 176 Earth days while the sidereal day (the time for 1 rotation in relation to a fixed point) lasts 59 Earth days. Mercury is nearly tidally locked to the Sun and over time this has slowed the rotation of the planet to almost match its orbit around the Sun. Mercury also has the highest orbital eccentricity of all the planets with its distance from the Sun ranging from 46 to 70 million km.", 
+      "One of five planets visible with the naked eye a, Mercury is just 4,879 Kilometres across its equator, compared with 12,742 Kilometres for the Earth.", 
+      "Even though the planet is small, Mercury is very dense. Each cubic centimetre has a density of 5.4 grams, with only the Earth having a higher density. This is largely due to Mercury being composed mainly of heavy metals and rock.",
+      "As the iron core of the planet cooled and contracted, the surface of the planet became wrinkled. Scientist have named these wrinkles, Lobate Scarps. These Scarps can be up to a mile high and hundreds of miles long."
+      ]}
+    img="/imgs/mercury-1.webp" />
+
+  <MoreInfo
+    planet="venus"
+    description={[
+      "Venus is the second planet from the Sun and is the second brightest object in the night sky after the Moon. Named after the Roman goddess of love and beauty, Venus is the second largest terrestrial planet and is sometimes referred to as the Earth’s sister planet due the their similar size and mass.", 
+      "The surface of the planet is obscured by an opaque layer of clouds made up of sulfuric acid."
+      ]}
+    subTitles={[
+      "Venus is the hottest planet in the Solar Systm.", 
+      "Venus rotates in the opposite direction to most other planets.", 
+      "Venus has a very weak magnetic field.", 
+      "No evidence of life has been found on Venus."
+      ]}
+    subParagraphs={[
+      "The thick clouds trap the Sun’s heat, resulting in surface temperatures higher than 880 degrees Fahrenheit (470 degrees Celsius). The atmosphere of Venus is made up almost completely of carbon dioxide and thick clouds of sulfuric acid completely cover the planet’s surface, making it difficult to observe the surface from space.", 
+      "Venus is the only planet that rotates clockwise. Also, because of the slow rotation of the planet, a day on Venus is longer than a year. It takes 243 Earth days to fully rotate on its axis, and 225 Earth days to orbit the Sun.", 
+      "Venus has a very weak magnetic field compared to Earth. This is thought to be due to the slow rotation of the planet, and because its core is made up of a liquid iron-nickel alloy.", 
+      "Although Venus is similar in size and mass to the Earth, it has a very different climate. Its thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar systm with surface temperatures hot enough to melt lead."
+      ]}
+    img="/imgs/venus-2.webp" />
+
+  <MoreInfo
+      planet="earth"
+      description={[
+        "Earth, our home, is the third planet from the Sun. It is the only planet known to have an atmosphere containing free oxygen, oceans of liquid water on its surface, and, of course, life.", 
+        "Earth is the fifth largest of the planets in the solar systm."
+        ]}
+      subTitles={[
+        "The Earth’s rotation is gradually slowing.", 
+        "The Earth’s atmosphere is 78% nitrogen, 21% oxygen, with traces of argon, carbon dioxide and water.", 
+        "The Earth was once believed to be the centre of the universe.", 
+        "The Earth has a powerful magnetic field."
+        ]}
+      subParagraphs={[
+        "This is thought to be due to the Moon’s gravitational pull, which creates a tidal bulge on the Earth’s oceans. The energy of this tidal friction is transferred to the Moon, pushing it slowly away from the Earth. The Moon is moving approximately 3.8cm away from the Earth every year.", 
+        "This atmosphere is essential for life on Earth. It not only provides the air that we breathe but also protects us from the blasts of heat and radiation emanating from the Sun. The Earth’s atmosphere is composed of 78% nitrogen, 21% oxygen, 0.9% argon, 0.03% carbon dioxide and trace amounts of other gases.",
+        "This was the belief of most early civilizations, with the Sumerians, Egyptians, Chinese, Indians, and Greeks all thinking that the Earth was the centre of the solar systm. This belief was eventually replaced by the heliocentric model first proposed by the ancient Greeks and later adopted by Copernicus and developed by Kepler and Galileo.",
+        "The Earth has a magnetic field that is generated by electrical currents in the outer core. This magnetic field is important for life on Earth as it protects the planet from the effects of solar wind. The magnetic field is not constant and has reversed itself many times in the past."
+        ]}
+      img="/imgs/earth-3.webp" />
+
+    <MoreInfo
+        planet="mars"
+        description={[
+          "Mars is the fourth planet from the sun. Befitting the red planet's bloody color, the Romans named it after their god of war. The Romans copied the ancient Greeks, who also named the planet after their god of war.",
+          "Ares. Other civilizations also typically gave the planet names based on its color — for example, the Egyptians named it 'Her Desher,'' meaning 'he red one,'' while ancient Chinese astronomers dubbed it 'the fire star."
+        ]}
+        subTitles={[
+          "Mars and Earth have approximately the same landmass.",
+          "Mars is home to the tallest mountain in the solar systm.",
+          "Only 18 missions to Mars have been successful.",
+          "Mars has the largest dust storms in the solar systm."
+        ]}
+        subParagraphs={[
+          "Even though Mars has only 15% of the Earth’s volume and just over 10% of the Earth’s mass, around two thirds of the Earth’s surface is covered in water. Martian surface gravity is only 37% of the Earth’s (meaning you could leap nearly three times higher on Mars).",
+          "Olympus Mons, a shield volcano, is 21km high and 600km in diameter. Despite having formed over billions of years, evidence from volcanic lava flows is so recent many scientists believe it could still be active.",
+          "As of September 2014 there have been 40 missions to Mars, including orbiters, landers and rovers but not counting flybys. The most recent arrivals include the Mars Curiosity mission in 2012, the MAVEN mission, which arrived on September 22, 2014, followed by the Indian Space Research Organization’s MOM Mangalyaan orbiter, which arrived on September 24, 2014. The next missions to arrive will be the European Space Agency’s ExoMars mission, comprising an orbiter, lander, and a rover, followed by NASA’s InSight robotic lander mission, slated for launch in March 2016 and a planned arrival in September, 2016.",
+          "They can last for months and cover the entire planet. The seasons are extreme because its elliptical (oval-shaped) orbital path around the Sun is more elongated than most other planets in the solar systm."
+        ]}
+        img="/imgs/mars-4.webp" />
+
+    <MoreInfo
+          planet="jupiter"
+          description={[
+            "Jupiter is the largest planet in the solar systm. Fittingly, it was named after the king of the gods in Roman mythology. In a similar manner, the ancient Greeks named the planet after Zeus, the king of the Greek pantheon.",
+            "Jupiter has a long history of surprising scientists—all the way back to 1610 when Galileo Galilei found the first moons beyond Earth. That discovery changed the way we see the universe."
+          ]}
+          subTitles={[
+            "Jupiter is the fourth brightest object in the solar systm.",
+            "Jupiter has the shortest day of all the planets.",
+            "The Great Red Spot is a huge storm on Jupiter.",
+            "Jupiter’s interior is made of rock, metal, and hydrogen compounds."
+          ]}
+          subParagraphs={[
+            "Only the Sun, the Moon, and Venus are brighter. It is one of five planets visible to the naked eye from Earth.",
+            "One day on Jupiter takes only about 10 hours (the time it takes for Jupiter to rotate or spin around once), and Jupiter makes a complete orbit around the Sun (a year in Jovian time) in about 12 Earth years (4,333 Earth days).",
+            "The Great Red Spot is a giant storm on Jupiter that is like a hurricane on Earth but much larger. It is so large that three Earths could fit inside it.",
+            "Jupiter’s atmosphere is made up mostly of hydrogen (H2) and helium (He). It also has small amounts of methane (CH4), water (H2O), ammonia (NH3), and other gases. But the planet has a core that is made of rock, metal, and hydrogen compounds. Scientists think that the temperature of Jupiter’s core is about 24,000 degrees Fahrenheit (13,000 degrees Celsius), which is hotter than the surface of the Sun."
+          ]}
+          img="/imgs/jupiter-5.webp" />
+
+        

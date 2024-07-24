@@ -1,0 +1,29 @@
+---
+import NavPlanets from '../components/NavPlanets.astro';
+import Solar from '../components/Solar.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Solar System with Astro.">
+	<main>
+		<h1 class="logo">
+			Solar Explorer
+			<span>in only CSS</span>
+		</h1>
+		<NavPlanets classPlanet="planet9" planet="pluto" numAu={39.5} checked={false} />
+		<NavPlanets classPlanet="planet8" planet="neptune" numAu={30.07} checked={false} />
+		<NavPlanets classPlanet="planet7" planet="uranus" numAu={19.22} checked={false} />
+		<NavPlanets classPlanet="planet6" planet="saturn" numAu={9.58} checked={false} />
+		<NavPlanets classPlanet="planet5" planet="jupiter" numAu={5.2} checked={false} />
+		<NavPlanets classPlanet="planet4" planet="mars" numAu={1.52} checked={true} />
+		<NavPlanets classPlanet="planet3" planet="earth" numAu={1} checked={true} />
+		<NavPlanets classPlanet="planet2" planet="venus" numAu={0.72} checked={true} />
+		<NavPlanets classPlanet="planet1" planet="mercury" numAu={0.39} checked={true} />
+
+		<Solar />
+	</main>
+</Layout>
+
+<style>
+	
+</style>
